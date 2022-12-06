@@ -1,3 +1,3 @@
-# learn-shaders
+# fragment-shaders
 
 Examples from the Book of Shaders with my modifications and experimentations.
