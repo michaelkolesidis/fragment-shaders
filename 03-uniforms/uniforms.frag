@@ -5,6 +5,12 @@ precision mediump float;
 uniform float u_time;
 
 void main() {
+
+    // Options:  sin(), cos(), tan(), asin(), 
+    // acos(), atan(), pow(), exp(), log(), 
+    // sqrt(), abs(), sign(), floor(), ceil(), 
+    // fract(), mod(), min(), max() and clamp()
+
 	gl_FragColor = vec4(
         abs(sin(u_time * 10.0)),
         abs(cos(u_time / 2.0)),
