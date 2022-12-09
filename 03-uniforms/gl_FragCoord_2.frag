@@ -28,8 +28,8 @@ void main() {
     // fract(), mod(), min(), max() and clamp()
 
     gl_FragColor = vec4(
-        abs(sin(mu.x * u_time * 10.0)),
-        abs(cos(mu.y * u_time * 4.0)),
-        0.4,
+        (abs(cos(mu.y * u_time * 40.0)) + abs(sin(mu.x * u_time / 2.0))) / 2.0,
+        (abs(cos(mu.y * u_time * 20.0)) + abs(sin(mu.x * u_time * 60.0))) / 2.0,
+        (abs(cos(mu.y * u_time * 4.0)) + abs(sin(mu.x * u_time * 10.0))) / 2.0 ,
         1.0);
 }

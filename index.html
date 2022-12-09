@@ -12,22 +12,38 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <p>fragment shaders*</p>
-    <canvas
-      id="0"
+    <h1>fragment shaders*</h1>
+    <div id="shaders">
+      <canvas
+        id="0"
+        class="glslCanvas"
+        data-fragment-url="./03-uniforms/uniforms.frag"
+        width="400"
+        height="400"
+      ></canvas>
+      <canvas
+        id="1"
+        class="glslCanvas"
+        data-fragment-url="./03-uniforms/gl_FragCoord.frag"
+        width="400"
+        height="400"
+      ></canvas>
+      <canvas
+        id="2"
+        class="glslCanvas"
+        data-fragment-url="./03-uniforms/gl_FragCoord_2.frag"
+        width="400"
+        height="400"
+      ></canvas>
+      <canvas
+      id="3"
       class="glslCanvas"
-      data-fragment-url="./03-uniforms/uniforms.frag"
-      width="500"
-      height="500"
+      data-fragment-url="./03-uniforms/gl_FragCoord_3.frag"
+      width="400"
+      height="400"
     ></canvas>
-    <canvas
-      id="1"
-      class="glslCanvas"
-      data-fragment-url="./03-uniforms/gl_FragCoord.frag"
-      width="500"
-      height="500"
-    ></canvas>
-    <p>*double-click for fullscreen</p>
+    </div>
+    <p>*double-click for fullscreen.<a href="https://github.com/michaelkolesidis/fragment-shaders">github</a></p>
     <script src="./script.js"></script>
   </body>
 </html>
