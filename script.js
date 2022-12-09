@@ -1,25 +1,29 @@
 const size = {
-  width: 500,
-  height: 500,
+  width: 400,
+  height: 400,
 };
+
+let activeCanvas;
 
 // Fullscreen mode
 window.addEventListener("dblclick", (event) => {
-  if (event.target.classList.contains("glslCanvas")) {
+  activeCanvas = event.target;
+
+  if (activeCanvas.classList.contains("glslCanvas")) {
     const fullscreenElement =
       document.fullscreenElement || document.webkitFullscreenElement;
 
     if (!fullscreenElement) {
-      if (event.target.requestFullscreen) {
-        event.target.requestFullscreen();
-      } else if (event.target.webkitRequestFullscreen) {
-        event.target.webkitRequestFullscreen();
+      if (activeCanvas.requestFullscreen) {
+        activeCanvas.requestFullscreen();
+      } else if (activeCanvas.webkitRequestFullscreen) {
+        activeCanvas.webkitRequestFullscreen();
       }
     } else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-        event.target.width = `${size.width}`;
-        event.target.height = `${size.height}`;
+        activeCanvas.width = `${size.width}`;
+        activeCanvas.height = `${size.height}`;
       } else if (document.webkitExitFullscreen) {
         document.webkitExitFullscreen();
       }
